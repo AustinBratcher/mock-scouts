@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cedar Park Troop 123 - Boy Scouts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2a5d3f;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background-color: #395b4e;
+            padding: 1em;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0.5em;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5em;
+            color: white;
+            cursor: pointer;
+        }
+
+        .hero {
+            background-image: url('https://picsum.photos/1920/500/');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 1px 1px 5px #000;
+            font-size: 2em;
+            text-align: center;
+            padding: 1em;
+        }
+
+        .content {
+            padding: 2em;
+        }
+
+        .section {
+            margin-bottom: 2em;
+        }
+
+        .section h2 {
+            border-bottom: 2px solid #2a5d3f;
+            padding-bottom: 0.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+        }
+
+        .gallery img {
+            width: 100%;
+            max-width: 150px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background-color: #2a5d3f;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                display: none;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero {
+                font-size: 1.5em;
+                height: 30vh;
+            }
+
+            .content {
+                padding: 1em;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav');
+
+            menuToggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Cedar Park Troop 123 - Boy Scouts of America</h1>
+        <span class="menu-toggle"><i class="fas fa-bars"></i></span>
+    </header>
+
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#events">Events</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#join">Join Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="hero">
+        <div>Adventure Awaits!</div>
+    </div>
+
+    <div class="content">
+        <div class="section" id="about">
+            <h2>About Us</h2>
+            <p>Welcome to Troop 123 in Cedar Park, Texas! We are part of the Boy Scouts of America dedicated to building leadership, community service, and outdoor skills in boys from ages 11 to 18.</p>
+        </div>
+
+        <div class="section" id="events">
+            <h2>Upcoming Events</h2>
+            <ul>
+                <li>Camping Trip to Pedernales Falls - June 15-17</li>
+                <li>Community Cleanup Project - July 10</li>
+                <li>Kayaking Day at Lake Travis - August 5</li>
+            </ul>
+        </div>
+
+        <div class="section" id="gallery">
+            <h2>Gallery</h2>
+            <p>Check out some of our past adventures!</p>
+            <div class="gallery">
+                <img src="https://picsum.photos/150" alt="Camping Trip Photo">
+                <img src="https://picsum.photos/150" alt="Kayaking Adventure">
+                <img src="https://picsum.photos/150" alt="Community Service Project">
+            </div>
+        </div>
+
+        <div class="section" id="join">
+            <h2>Join Us</h2>
+            <p>Interested in joining Troop 123? We are always looking for new scouts who love adventure and are willing to learn. Please fill out our registration form or come visit one of our meetings!</p>
+        </div>
+
+        <div class="section" id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, feel free to reach out:</p>
+            <p>Email: <a href="mailto:troop123@example.com">troop123@example.com</a></p>
+            <p>Phone: (512) 555-1234</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Cedar Park Troop 123 - Boy Scouts of America</p>
+    </footer>
+</body>
+</html>
